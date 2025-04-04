@@ -1,0 +1,103 @@
+header {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+
+header .container {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* logo */
+header .container a {
+  height: inherit;
+}
+
+header .container a img {
+  height: inherit;
+}
+
+/* nav */
+header .container nav {
+  position: relative;
+}
+
+header .container nav button {
+  position: relative;
+  z-index: 10;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+header .container nav button i {
+  font-size: var(--lg-font);
+  color: var(--third-clr);
+}
+
+header .container nav .list {
+  position: absolute;
+  top: 30px;
+  left: -75px;
+  z-index: 9;
+  padding: 5px 0;
+  display: none;
+  background-color: white;
+}
+header .container nav .list::before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: 73px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+/* acvive js */
+header .container nav .active_list {
+  display: block !important;
+}
+
+/* header .container nav .list li {} */
+
+header .container nav .list li a {
+  display: block;
+  padding: 5px 10px;
+  color: black;
+  font-size: var(--lg-font);
+}
+header .container nav .list li a:hover {
+  background-color: var(--main-clr);
+}
+
+
+@media (max-width: 767px) {
+  header {
+    height: 40px;
+  }
+  
+  /* nav */
+  header .container nav button i {
+    font-size: var(--sm-font);
+  }
+  
+  header .container nav .list {
+    top: 26px;
+    left: -61px;
+  }
+  header .container nav .list::before {
+    top: -16px;
+    left: 59px;
+    border-width: 8px;
+  }
+
+  header .container nav .list li a {
+    font-size: var(--sm-font);
+  }
+}
